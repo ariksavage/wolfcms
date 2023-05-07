@@ -49,6 +49,7 @@ if (!defined('BASE_URL'))           define('BASE_URL', 'http://'.dirname($_SERVE
 if (!defined('DEFAULT_CONTROLLER')) define('DEFAULT_CONTROLLER', 'index');
 if (!defined('DEFAULT_ACTION'))     define('DEFAULT_ACTION', 'index');
 
+if (!defined('DEFAULT_TIMEZONE'))   define('DEFAULT_TIMEZONE', date_default_timezone_get());
 // Setting error display depending on debug mode or not
 error_reporting((DEBUG ? (E_ALL | E_STRICT) : 0));
 
@@ -65,10 +66,11 @@ if ( ! isset($_SESSION['initiated'])) {
 }
 
 ini_set('date.timezone', DEFAULT_TIMEZONE);
-if(function_exists('date_default_timezone_set'))
-    date_default_timezone_set(DEFAULT_TIMEZONE);
-else
+if(function_exists('date_default_timezone_set')){
+    // date_default_timezone_set(DEFAULT_TIMEZONE);
+} else {
     putenv('TZ='.DEFAULT_TIMEZONE);
+}
 
 /**
  * The Dispatcher class is responsible for mapping urls/routes to Controller methods.
@@ -98,6 +100,7 @@ else
  * The dispatcher is used by calling Dispatcher::addRoute() to setup the route(s),
  * and Dispatcher::dispatch() to handle the current request and get a response.
  */
+
 final class Dispatcher {
     private static $routes = array();
     private static $params = array();
@@ -1870,7 +1873,7 @@ function get_url() {
     $url = '';
     foreach ($params as $param) {
         if (strlen($param)) {
-            $url .= $param{0} == '#' ? $param: '/'. $param;
+            $url .= $param[0] == '#' ? $param: '/'. $param;
         }
     }
     return BASE_URL . preg_replace('/^\/(.*)$/', '$1', $url);

@@ -12,13 +12,17 @@
  */
 
 // Make sure we hide ugly errrors
-error_reporting(0);
+// Report all PHP errors (see changelog)
+error_reporting(E_ALL);
+
+// Report all PHP errors
+error_reporting(-1);
 
 define('INSTALL_SEQUENCE', true);
 
-define('CORE_ROOT', dirname(__FILE__).'/../../wolf');
-define('CFG_FILE', '../../config.php');
-define('PUBLIC_ROOT', '../../public/');
+define('CORE_ROOT', realpath(dirname(__FILE__).'/../../wolf'));
+define('CFG_FILE', realpath('../../config.php'));
+define('PUBLIC_ROOT', realpath('../../public/'));
 define('DEFAULT_ADMIN_USER', 'admin');
 require_once CORE_ROOT.'/Framework.php';
 ?>
