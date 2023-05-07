@@ -1,4 +1,7 @@
-.Ds_Store
+.DS_Store
+
+*.sublime-project
+*.sublime-workspace
 
 .ddev
 ! .ddev/config.yml
