@@ -1,8 +1,14 @@
+# OSX
 .DS_Store
 
+# IDE
 *.sublime-project
 *.sublime-workspace
 
+# DDEV
 .ddev
 ! .ddev/config.yml
 ! .ddev/commands/web
+
+# Wolf
+config.php

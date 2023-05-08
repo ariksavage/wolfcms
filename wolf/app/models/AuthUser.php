@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 /*
  * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
  * Copyright (C) 2008-2010 Martijn van der Kleijn <martijn.niji@gmail.com>
@@ -32,6 +33,7 @@ if (!defined('DELAY_FIRST_AFTER')) define ('DELAY_FIRST_AFTER', 3);
  * Tracks information of the logged in user, has login/logout method and
  * permission related functionality.
  */
+
 class AuthUser {
     const SESSION_KEY                   = 'wolf_auth_user';
     const COOKIE_KEY                    = 'wolf_auth_user';
@@ -48,7 +50,7 @@ class AuthUser {
      *
      * @return boolean Returns true when logged in user was found, otherwise false.
      */
-    static public final function load() {
+    static public function load() {
         if (isset($_SESSION[self::SESSION_KEY]) && isset($_SESSION[self::SESSION_KEY]['username']))
             $user = User::findBy('username', $_SESSION[self::SESSION_KEY]['username']);
         else if (isset($_COOKIE[self::COOKIE_KEY]))
@@ -69,7 +71,7 @@ class AuthUser {
      *
      * @param Record $user User object instance.
      */
-    static private final function setInfos(Record $user) {
+    static private function setInfos(Record $user) {
         $_SESSION[self::SESSION_KEY] = array('username' => $user->username);
 
         self::$record = $user;
@@ -83,7 +85,7 @@ class AuthUser {
      *
      * @return boolean True when logged in, otherwise false.
      */
-    static public final function isLoggedIn() {
+    static public function isLoggedIn() {
         return self::$is_logged_in;
     }
 
@@ -92,7 +94,7 @@ class AuthUser {
      *
      * @return User An object instance of type User.
      */
-    static public final function getRecord() {
+    static public function getRecord() {
         return self::$record ? self::$record: false;
     }
 
@@ -101,7 +103,7 @@ class AuthUser {
      *
      * @return string User id.
      */
-    static public final function getId() {
+    static public function getId() {
         return self::$record ? self::$record->id: false;
     }
 
@@ -110,7 +112,7 @@ class AuthUser {
      *
      * @return string Username.
      */
-    static public final function getUserName() {
+    static public function getUserName() {
         return self::$record ? self::$record->username: false;
     }
 
@@ -119,7 +121,7 @@ class AuthUser {
      *
      * @return array Array of permission names.
      */
-    static public final function getPermissions() {
+    static public function getPermissions() {
         $perms = array();
 
         foreach(self::$roles as $role) {
@@ -135,7 +137,7 @@ class AuthUser {
      * @param string $permission    Single permission or comma seperated list.
      * @return boolean              Returns true if user has one or more of the permissions.
      */
-    static public final function hasPermission($permissions) {
+    static public function hasPermission($permissions) {
         if ($permissions === false)
             return true;
         
@@ -164,7 +166,7 @@ class AuthUser {
      * @param string $roles         Single rolename or comma seperated list.
      * @return boolean              Returns true if user has one or more of the roles.
      */
-    static public final function hasRole($roles) {
+    static public function hasRole($roles) {
         if (self::getId() == 1)
             return true;
 
@@ -182,7 +184,7 @@ class AuthUser {
      * @param <type> $username
      * @return <type> 
      */
-    static public final function forceLogin($username, $set_cookie=false) {
+    static public function forceLogin($username, $set_cookie=false) {
         return self::login($username, null, $set_cookie, false);
     }
 
@@ -194,7 +196,7 @@ class AuthUser {
      * @param boolean $set_cookie   Set a "remember me" cookie? Defaults to false.
      * @return boolean              Returns true when successful, otherwise false.
      */
-    static public final function login($username, $password, $set_cookie=false, $validate_password=true) {
+    static public function login($username, $password, $set_cookie=false, $validate_password=true) {
         self::logout();
 
         $user = User::findBy('username', $username);
@@ -246,7 +248,7 @@ class AuthUser {
     /**
      * Logs out a user.
      */
-    static public final function logout() {
+    static public function logout() {
         unset($_SESSION[self::SESSION_KEY]);
 
         self::eatCookie();
@@ -262,7 +264,7 @@ class AuthUser {
      * @param string $cookie    Cookie's content.
      * @return boolean          True if cookie is valid, otherwise false.
      */
-    static private final function challengeCookie($cookie) {
+    static private function challengeCookie($cookie) {
         $params = self::explodeCookie($cookie);
         if (isset($params['exp'], $params['id'], $params['digest'])) {
             if ( ! $user = User::findById($params['id']))
@@ -281,7 +283,7 @@ class AuthUser {
      * @param string $cookie    Cookie's content.
      * @return array            Exploded cookie.
      */
-    static private final function explodeCookie($cookie) {
+    static private function explodeCookie($cookie) {
         $pieces = explode('&', $cookie);
 
         if (count($pieces) < 2)
@@ -297,9 +299,9 @@ class AuthUser {
     /**
      * Eats (destroys) a cookie.
      */
-    static private final function eatCookie() {
-        setcookie(self::COOKIE_KEY, false, $_SERVER['REQUEST_TIME']-COOKIE_LIFE, '/', null, (isset($_ENV['SERVER_PROTOCOL']) && (strpos($_ENV['SERVER_PROTOCOL'],'https') || strpos($_ENV['SERVER_PROTOCOL'],'HTTPS'))));
-    }
+    // static private function eatCookie() {
+    //     setcookie(self::COOKIE_KEY, false, $_SERVER['REQUEST_TIME']-COOKIE_LIFE, '/', null, (isset($_ENV['SERVER_PROTOCOL']) && (strpos($_ENV['SERVER_PROTOCOL'],'https') || strpos($_ENV['SERVER_PROTOCOL'],'HTTPS'))));
+    // }
 
     /**
      * Creates content for a cookie. (enjoy...)
@@ -308,11 +310,10 @@ class AuthUser {
      * @param User      $user   A User object.
      * @return string           The actual cookie content.
      */
-    static private final function bakeUserCookie($time, User $user) {
-        use_helper('Hash');
-        $hash = new Crypt_Hash('sha256');
+    static private function bakeUserCookie($time, User $user) {
+        $hash = hash('sha256', rand(), false);
 
-        return 'exp='.$time.'&id='.$user->id.'&digest='.bin2hex($hash->hash($user->username.$user->salt));
+        return 'exp='.$time.'&id='.$user->id.'&digest='.bin2hex($user->username.$user->salt);
     }
 
     /**
@@ -321,12 +322,13 @@ class AuthUser {
      * @param   int     $max  The maximum number of characters in the salt.
      * @return  string        The salt.
      */
-    static public final function generateSalt($max = 32) {
-        use_helper('Hash');
-        $hash = new Crypt_Hash('sha256');
+    public static function generateSalt($max = 32) {
+        // use_helper('Hash');
+        // $hash = new Crypt_Hash('sha256');
+        $hash = hash('sha256', rand(), false);
 
         $base = rand(0, 1000000) . microtime(true) . rand(0, 1000000) . rand(0, microtime(true));
-        $salt = bin2hex($hash->hash($base));
+        $salt = bin2hex($hash);
 
         if($max < 32){
             $salt = substr($salt, 0, $max);
@@ -348,12 +350,9 @@ class AuthUser {
      * @param <type> $salt
      * @return <type>
      */
-    static public final function generateHashedPassword($password, $salt) {
-        use_helper('Hash');
-
-        $hash = new Crypt_Hash('sha512');
-
-        return bin2hex($hash->hash($password.$salt));
+    static public function generateHashedPassword($password, $salt) {
+        $hashedPassword = hash('sha256', $password.$salt, false);
+        return $hashedPassword;
     }
 
     /**
@@ -363,7 +362,7 @@ class AuthUser {
      * @param string    $pwd    Password to validate.
      * @return boolean          True when valid, otherwise false.
      */
-    static public final function validatePassword(User $user, $pwd) {
+    static public function validatePassword(User $user, $pwd) {
         if (empty($user->salt)) {
             // Pre 070 method
             return $user->password == sha1($pwd);
@@ -374,3 +373,4 @@ class AuthUser {
     }
 
 } // end AuthUser class
+
