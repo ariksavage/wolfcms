@@ -2219,7 +2219,7 @@ function getContentFromUrl($url, $flags=0, $context=false) {
     if (!defined('CHECK_TIMEOUT')) define('CHECK_TIMEOUT', 5);
 
     // Use file_get_contents when possible... is faster.
-    if (ini_get('allow_url_fopen') && function_exists('file_get_contents')) {
+    if (ini_get('allow_url_fopen') && function_exists('file_get_contents') && is_file($url)) {
         if ($context === false) $context = stream_context_create(array('http' => array('timeout' => CHECK_TIMEOUT)));
 
         return file_get_contents($url, $flags, $context);

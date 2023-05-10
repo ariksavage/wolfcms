@@ -254,15 +254,20 @@ class Plugin {
             }
             Plugin::$updatefile_cache[$plugin->update_url] = array('time' => time(), 'data' => $data);
         }
+        $data = Plugin::$updatefile_cache[$plugin->update_url]['data'];
+        if (!stristr($data, '403')){
+          $xml = simplexml_load_string($data);
+        
 
-        $xml = simplexml_load_string(Plugin::$updatefile_cache[$plugin->update_url]['data']);
-
-        foreach($xml as $node) {
-            if ($plugin->id == $node->id)
-                if ($plugin->version == $node->version)
-                    return __('latest');
-                else
-                    return (string) $node->version;
+          foreach($xml as $node) {
+              if ($plugin->id == $node->id)
+                  if ($plugin->version == $node->version)
+                      return __('latest');
+                  else
+                      return (string) $node->version;
+          }
+        } else {
+          return 'not found';
         }
 
         return __('error');

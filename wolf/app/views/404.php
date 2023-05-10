@@ -25,7 +25,7 @@
   <meta name="generator" content="wolf-cms" />
 </head>
 <body>
-  <h1>Content Not Found (404)</h1>
+  <h1>Content Not Found (404) [<?php echo $_SERVER['REQUEST_URI']; ?>]</h1>
   <p>The content you requested was not found. It may have been deleted or you may have entered an incorrect address.</p>
   <p>Please return to the <a href="<?php echo URL_PUBLIC; ?>">home page</a> to view the main navigation.</p>
 </body>

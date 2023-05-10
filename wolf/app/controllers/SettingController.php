@@ -55,6 +55,7 @@ class SettingController extends Controller {
      * Calls save function or displays settings screen.
      */
     public final function index() {
+      die('index');
       // check if trying to save
       if (get_request_method() == 'POST') {
           $this->_save();
