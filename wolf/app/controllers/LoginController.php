@@ -73,24 +73,28 @@ class LoginController extends Controller {
      * Allows a user to login.
      */
     function login() {
+
         $redirect = '';
 
         if (Flash::get('redirect') != null)
             $redirect = Flash::get('redirect');
         elseif (Flash::get('HTTP_REFERER') != null)
             $redirect = trim(Flash::get('HTTP_REFERER'));
-
         // Allow plugins to handle login
+
         Observer::notify('login_requested', $redirect);
 
         // already log in ?
-        if (AuthUser::isLoggedIn())
-            if ($redirect != '')
-                redirect(self::sanitizeRedirect($redirect));
-            else
-                redirect(get_url());
+        if (AuthUser::isLoggedIn()) {
+          if ($redirect != '') {
+            redirect(self::sanitizeRedirect($redirect));
+          } else {
+            redirect(get_url());
+          }
+        }
 
         if (get_request_method() == 'POST') {
+
             $data = isset($_POST['login']) ? $_POST['login']: array('username' => '', 'password' => '');
             Flash::set('username', $data['username']);
 

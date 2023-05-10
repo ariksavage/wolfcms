@@ -127,6 +127,7 @@ final class Dispatcher {
      * @return boolean          Returns true when a route was found, otherwise false.
      */
     public static function hasRoute($requested_url) {
+
         if (!self::$routes || count(self::$routes) == 0) {
             return false;
         }
@@ -173,6 +174,7 @@ final class Dispatcher {
      * @return string               A response.
      */
     public static function dispatch($requested_url = null, $default = null) {
+
         Flash::init();
 
         // If no url passed, we will get the first key from the _GET array
@@ -237,7 +239,6 @@ final class Dispatcher {
                 break;
             }
         }
-
         return self::executeAction(self::getController(), self::getAction(), self::getParams());
     } // Dispatch
 
@@ -319,12 +320,11 @@ final class Dispatcher {
         // Get an instance of that controller
         if (class_exists($controller_class_name)) {
             $controller = new $controller_class_name();
-        } else {
-        }
-        if ( ! $controller instanceof Controller) {
-            throw new Exception("Class '{$controller_class_name}' does not extends Controller class!");
         }
 
+        if ( ! $controller instanceof Controller) {
+            throw new Exception("Class '{$controller_class_name}' does not extend Controller class!");
+        }
         // Execute the action
         $controller->execute($action, $params);
     }
@@ -1252,11 +1252,11 @@ abstract class Finder extends Record {
  * <code>
  * <html>
  * <head>
- *   <title><?php echo $title;?></title>
+ *   <title><?php echo $title;</title>
  * </head>
  * <body>
- *   <h1><?php echo $title;?></h1>
- *   <p><?php echo $body;?></p>
+ *   <h1><?php echo $title;</h1>
+ *   <p><?php echo $body;</p>
  * </body>
  * </html>
  * </code>
@@ -1360,6 +1360,7 @@ class View {
  *      - return a string response
  *      - redirect to another method
  */
+
 class Controller {
     protected $layout = false;
     protected $layout_vars = array();
@@ -1449,8 +1450,8 @@ class Controller {
                 throw new Exception('No function or class found to render JSON.');
             }
     }
-
-} // end Controller class
+}
+// end Controller class
 
 
 /**

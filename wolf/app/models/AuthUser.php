@@ -198,14 +198,11 @@ class AuthUser {
      */
     static public function login($username, $password, $set_cookie=false, $validate_password=true) {
         self::logout();
-
         $user = User::findBy('username', $username);
-
         if (DELAY_ON_INVALID_LOGIN && $user->failure_count > DELAY_FIRST_AFTER) {
             $last = explode(' ', $user->last_failure);
             $date = explode('-', $last[0]);
             $hours = explode(':', $last[1]);
-
             $last = mktime($hours[0], $hours[1], $hours[2], $date[1], $date[2], $date[0]);
             // thirty (by default) second delay for every failed attempt
             $now = time() - (DELAY_ONCE_EVERY * $user->failure_count);
@@ -249,6 +246,7 @@ class AuthUser {
      * Logs out a user.
      */
     static public function logout() {
+
         unset($_SESSION[self::SESSION_KEY]);
 
         self::eatCookie();
@@ -299,9 +297,9 @@ class AuthUser {
     /**
      * Eats (destroys) a cookie.
      */
-    // static private function eatCookie() {
-    //     setcookie(self::COOKIE_KEY, false, $_SERVER['REQUEST_TIME']-COOKIE_LIFE, '/', null, (isset($_ENV['SERVER_PROTOCOL']) && (strpos($_ENV['SERVER_PROTOCOL'],'https') || strpos($_ENV['SERVER_PROTOCOL'],'HTTPS'))));
-    // }
+    static private function eatCookie() {
+        setcookie(self::COOKIE_KEY, false, $_SERVER['REQUEST_TIME']-COOKIE_LIFE, '/', null, (isset($_ENV['SERVER_PROTOCOL']) && (strpos($_ENV['SERVER_PROTOCOL'],'https') || strpos($_ENV['SERVER_PROTOCOL'],'HTTPS'))));
+    }
 
     /**
      * Creates content for a cookie. (enjoy...)
