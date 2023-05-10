@@ -33,7 +33,7 @@
  *
  *    $hash->setKey('abcdefg');
  *
- *    echo base64_encode($hash->hash('abcdefg'));
+ *    echo base64_encode(hash('sha256', 'abcdefg', false));
  * ?>
  * </code>
  *

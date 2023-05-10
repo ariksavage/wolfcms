@@ -35,8 +35,7 @@ if (!defined('INSTALL_SEQUENCE')) {
 require 'Template.php';
 require CORE_ROOT.'/app/models/AuthUser.php';
 
-use_helper('Hash');
-$hash = new Crypt_Hash('sha256');
+$hash = hash('sha256', rand(), false);
 
 $msg = '';
 $error = false;

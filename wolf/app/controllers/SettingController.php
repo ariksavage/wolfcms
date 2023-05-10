@@ -25,7 +25,7 @@ class SettingController extends Controller {
     /**
      * Used to check generic permissions for entire the controller.
      */
-    private static final function _checkPermission() {
+    private static function _checkPermission() {
         AuthUser::load();
         if (!AuthUser::isLoggedIn()) {
             redirect(get_url('login'));
@@ -55,21 +55,21 @@ class SettingController extends Controller {
      * Calls save function or displays settings screen.
      */
     public final function index() {
-        // check if trying to save
-        if (get_request_method() == 'POST') {
-            $this->_save();
-        }
+      // check if trying to save
+      if (get_request_method() == 'POST') {
+          $this->_save();
+      }
 
-        $this->display('setting/index',
-                array('csrf_token' => SecureToken::generateToken(BASE_URL.'setting'))
-        );
+      $this->display('setting/index',
+        array('csrf_token' => SecureToken::generateToken(BASE_URL.'setting'))
+      );
     }
 
 
     /**
      * Saves the settings.
      */
-    private final function _save() {
+    private function _save() {
         $data = $_POST['setting'];
 
         // CSRF checks

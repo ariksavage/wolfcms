@@ -46,37 +46,34 @@ final class SecureToken extends Record {
      * @param string    $url
      * @return mixed    Returns a valid token or false upon error.
      */
-    public static final function generateToken($url) {
-        use_helper('Hash');
-        $hash = new Crypt_Hash('sha256');
+    final public static function generateToken($url) {
+        $hash = hash('sha256', rand(), false);
         AuthUser::load();
         
         if (AuthUser::isLoggedIn()) {
             $user = AuthUser::getRecord();
             $time = microtime(true);
             $target_url = str_replace('&amp;', '&', $url);
-            $pwd = substr(bin2hex($hash->hash($user->password)), 5, 20);
+            $pwd = substr(bin2hex(hash('sha256', $user->password, false)), 5, 20);
 
             $oldtoken = SecureToken::getToken($user->username, $target_url);
-
             if (false === $oldtoken) {
                 $oldtoken = new SecureToken();
                 
                 $oldtoken->username = $user->username;
-                $oldtoken->url = bin2hex($hash->hash($target_url));
+                $oldtoken->url = bin2hex(hash('sha256', $target_url, false));
                 $oldtoken->time = $time;
 
                 $oldtoken->save();
             }
             else {
                 $oldtoken->username = $user->username;
-                $oldtoken->url = bin2hex($hash->hash($target_url));
+                $oldtoken->url = bin2hex(hash('sha256', $target_url, false));
                 $oldtoken->time = $time;
-
                 $oldtoken->save();
             }
 
-            return bin2hex($hash->hash($user->username.$time.$target_url.$pwd.$user->salt));
+            return bin2hex(hash('sha256', $user->username.$time.$target_url.$pwd.$user->salt, false));
         }
         
         return false;
@@ -101,15 +98,14 @@ final class SecureToken extends Record {
      * @param string $url   The url for which the token was generated.
      * @return boolean      True if the token is valid, otherwise false.
      */
-    public static final function validateToken($token, $url) {
-        use_helper('Hash');
-        $hash = new Crypt_Hash('sha256');
+    final public static function validateToken($token, $url) {
+        $hash = hash('sha256', rand(), false);
         AuthUser::load();
         
         if (AuthUser::isLoggedIn()) {
             $user = AuthUser::getRecord();
             $target_url = str_replace('&amp;', '&', $url);
-            $pwd = substr(bin2hex($hash->hash($user->password)), 5, 20);
+            $pwd = substr(bin2hex(hash('sha256', $user->password, false)), 5, 20);
 
             $time = SecureToken::getTokenTime($user->username, $target_url);
 
@@ -118,45 +114,41 @@ final class SecureToken extends Record {
             }
 
             if (!isset($user->salt)) {
-                return (bin2hex($hash->hash($user->username.$time.$target_url.$pwd)) === $token);
+                return (bin2hex(hash('sha256', $user->username.$time.$target_url.$pwd, false)) === $token);
             }
             else {
-                return (bin2hex($hash->hash($user->username.$time.$target_url.$pwd.$user->salt)) === $token);
+                return (bin2hex(hash('sha256', $user->username.$time.$target_url.$pwd.$user->salt, false)) === $token);
             }
         }
 
         return false;
     }
 
-    private static final function getToken($username, $url) {
-        use_helper('Hash');
-        $hash = new Crypt_Hash('sha256');
+    private static function getToken($username, $url) {
+        // $hash = hash('sha256', rand(), false);
 
         $token = false;
         $token = self::findOne(array(
             'where' => 'username = :username AND url = :url',
             'values' => array(':username' => $username,
-                              ':url' => bin2hex($hash->hash($url))
+                              ':url' => bin2hex(hash('sha256', $url, false))
             )
         ));
-
         if ($token !== null && $token !== false && $token instanceof SecureToken) {
             return $token;
         }
-
         return false;
     }
 
-    private static final function getTokenTime($username, $url) {
-        use_helper('Hash');
-        $hash = new Crypt_Hash('sha256');
+    private static function getTokenTime($username, $url) {
+        $hash = hash('sha256', rand(), false);
         $time = 0;
 
         $token = self::findOne(array(
             'where' => 'username = :username AND url = :url',
             'values' => array(
                 ':username' => $username,
-                ':url' => bin2hex($hash->hash($url))
+                ':url' => bin2hex(hash('sha256', $url, false))
             )
         ));
 

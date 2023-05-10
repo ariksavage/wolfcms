@@ -888,7 +888,6 @@ class Record {
 
         // Run query
         $objects = self::findBySql($sql, $values);
-
         return ($single) ? (!empty($objects) ? $objects[0] : false) : $objects;
     }
 
