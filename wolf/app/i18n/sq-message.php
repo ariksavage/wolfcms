@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; trashëgo &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Vërejtje!</b> Verzion i ri i Wolf është i gatshëm (v. <b>:version</b>)! Vizito <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> për ta përditësuar verzionin tënd',
+
     'A translatable string with a %param% system.' => 'Një fjali e përkthyeshme me një %param% sistem',
     'A translatable string.' => 'Një fjali e përkthyeshme.',
     'Action disabled!' => 'Pamundëso veprimin',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Websajti',
     'What is a Layout?' => '&Ccedil;ka është një Dukje?',
     'What is a Snippet?' => '&Ccedil;ka është një Copëz?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Kur emailat dërgohen nga Wolf CMS, kjo email adresë do të përdoret si dërgues. Standard: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Kur është aktive, vetëm përdoruesit të cilët janë administratorë do të mund të editojnë faqen.',
     'When enabled, users have to login before they can view the page.' => 'Kur është aktive, përdoruesit duhet të ky&ccedil;en para se të shohin faqen.',
     'Where do the avatars come from?' => 'Prej nga vijnë avatarët?',

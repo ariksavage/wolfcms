@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2009-2010 Martijn van der Kleijn <martijn.niji@gmail.com>
  * Copyright (C) 2008 Philippe Archambault <philippe.archambault@gmail.com>
  *
@@ -187,7 +187,7 @@ if (!isset($title) || trim($title) == '') {
 
     <div id="footer">
       <p>
-      <?php echo __('Thank you for using'); ?> <a href="http://www.wolfcms.org/" target="_blank">Wolf CMS</a> <?php echo CMS_VERSION; ?> | <a href="http://forum.wolfcms.org/" target="_blank"><?php echo __('Feedback'); ?></a> | <a href="http://docs.wolfcms.org/" target="_blank"><?php echo __('Documentation'); ?></a>
+      <?php echo __('Thank you for using'); ?> Wolf CMS <?php echo CMS_VERSION; ?>
       </p>
 <?php if (DEBUG): ?>
         <p class="stats">

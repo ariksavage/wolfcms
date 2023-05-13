@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2008-2010 Martijn van der Kleijn <martijn.niji@gmail.com>
  *
  * This file is part of Wolf CMS. Wolf CMS is licensed under the GNU GPLv3 license.

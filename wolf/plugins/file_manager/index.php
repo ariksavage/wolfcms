@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2008-2010 Martijn van der Kleijn <martijn.niji@gmail.com>
  * Copyright (C) 2008 Philippe Archambault <philippe.archambault@gmail.com>
  *
@@ -44,9 +44,7 @@ Plugin::setInfos(array(
     'id'          => 'file_manager',
     'title'       => __('File Manager'),
     'description' => __('Provides interface to manage files from the administration.'),
-    'version'     => '1.0.0', 
-    'website'     => 'http://www.wolfcms.org/',
-    'update_url'  => 'http://www.wolfcms.org/plugin-versions.xml'
+    'version'     => '1.0.0',
 ));
 
 Plugin::addController('file_manager', __('Files'), 'file_manager_view');

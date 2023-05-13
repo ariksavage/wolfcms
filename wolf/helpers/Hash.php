@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  *
  * The following code was copied as-is from the phphseclib library version 0.2.1a
  * apart from the following changes:

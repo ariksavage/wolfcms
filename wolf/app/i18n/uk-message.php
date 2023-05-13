@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; успадковує &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Інформация!</b> Доступна нова версія WolfCMS (в. <b>:version</b>)! Увійдіть на <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> для оновлення Вашої версії!',
+
     'A translatable string with a %param% system.' => 'A translatable string with a %param% system.',
     'A translatable string.' => 'A translatable string.',
     'Action disabled!' => 'Action disabled!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Сайт',
     'What is a Layout?' => 'Що так шаблон?',
     'What is a Snippet?' => 'Що таке сніппет?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Коли email листи відправляються з Wolf CMS, цю адресу буде зазначено як адресу відправника. За замовчуванням: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Якщо встановлено, лише користувачі, що є адміністраторами, можуть редагувати сторінку.',
     'When enabled, users have to login before they can view the page.' => 'Якщо встановлено, лише зареєстровані користувачі можуть переглядати сторінку.',
     'Where do the avatars come from?' => 'Звідки надходять аватари?',

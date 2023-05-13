@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; 继承 &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>信息!</b> 发现新的Wolf版本 (v. <b>:version</b>)! 请访问 <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> 以便升级!',
+
     'A translatable string with a %param% system.' => '可以翻译的字符串用 %param% 标注的系统.',
     'A translatable string.' => '可以翻译的字符串',
     'Action disabled!' => '操作无效!',
@@ -187,7 +187,7 @@ return array(
     'Website' => '网址',
     'What is a Layout?' => '什么是布局?',
     'What is a Snippet?' => '什么是片段?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => '默认使用do-not-reply@wolfcms.org来标记Wolf发出邮件的发件人',
+
     'When enabled, only users who are an administrator can edit the page.' => '选中后，仅管理员可以编辑此页面。',
     'When enabled, users have to login before they can view the page.' => '选中后，用户登录后才能查看此页面。',
     'Where do the avatars come from?' => '头像来自哪里?',

@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; 繼承 &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>注意!</b> 有新版的Wolf 釋出, (版本. <b>:version</b>)!  請到<a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a>  更新您現在使用版本!',
+
     'A translatable string with a %param% system.' => 'A translatable string with a %param% system.',
     'A translatable string.' => '一個可以翻譯的字串',
     'Action disabled!' => '此功能被關閉',
@@ -188,7 +188,7 @@ return array(
     'Website' => '網站',
     'What is a Layout?' => 'What is a Layout?',
     'What is a Snippet?' => 'What is a Snippet?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'When enabled, only users who are an administrator can edit the page.',
     'When enabled, users have to login before they can view the page.' => 'When enabled, users have to login before they can view the page.',
     'Where do the avatars come from?' => 'Where do the avatars come from?',

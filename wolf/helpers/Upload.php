@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  *
  * This file is part of Wolf CMS.
  *

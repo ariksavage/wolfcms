@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; dziedzicz &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informacja!</b> Dostępna jest nowa wersja Wolf\'a (v. <b>:version</b>)! Odwiedź <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> w celu aktualizacji!',
+
     'A translatable string with a %param% system.' => 'Tekst do przetłumaczenia ze zmienną %param%.',
     'A translatable string.' => 'Tekst do przetłumaczenia',
     'Action disabled!' => 'Akcja zablokowana!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Strona WWW',
     'What is a Layout?' => 'Czym jest szablon?',
     'What is a Snippet?' => 'Czym są skrawki?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Podczas wysyłania wiadomości email przez Wolf\'a ten adres zostanie użyty, jako adres nadawcy. Domyślnie: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Jeśli włączone, tylko administratorzy mogą edytować tę stronę.',
     'When enabled, users have to login before they can view the page.' => 'Jeśli włączone, strona dostępna tylko po zalogowaniu.',
     'Where do the avatars come from?' => 'Skąd pochodzą awatary?',

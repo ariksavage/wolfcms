@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; inherit &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informasi!</b> Wolf versi baru (v. <b>:version</b>) sudah dirilis! Silahkan kunjungi <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> untuk mendownload versi yang baru!',
+
     'A translatable string with a %param% system.' => 'String yang dapat diterjemahkan dengan sistem %param%',
     'A translatable string.' => 'String yang dapat diterjemahkan.',
     'Action disabled!' => 'Fungsi dinonaktifkan!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Situs',
     'What is a Layout?' => 'Apa sih arti Layout?',
     'What is a Snippet?' => 'Apa sih arti Snippet?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Ketika email dikirim oleh Wolf CMS, alamat email ini akan digunakan sebagai pengirimnya. Default: jangan-di-balas@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Jika diaktifkan, hanya user yang mempunyai peran sebagai administrator yang dapat mengedit halaman tersebut.',
     'When enabled, users have to login before they can view the page.' => 'Jika diaktifkan, pengunjung harus login terlebih dahulu untuk dapat melihat halaman tersebut.',
     'Where do the avatars come from?' => 'Darimana asalnya avatar tersebut?',

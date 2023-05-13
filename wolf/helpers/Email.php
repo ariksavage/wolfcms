@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2011 Martijn van der Kleijn <martijn.niji@gmail.com>
  *
  * Please see license.txt for the full license text.
@@ -20,7 +20,7 @@
  *
  * @author     Martijn van der Kleijn <martijn.niji@gmail.com>
  * @copyright  2011, Martijn van der Kleijn
- * @license    http://www.wolfcms.org/about/wolf-cms-licensing.html
+ 
  */
 
 define('EMAIL_FORMAT', '/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix');

@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2008-2011 Martijn van der Kleijn <martijn.niji@gmail.com>
  * Copyright (C) 2008 Philippe Archambault <philippe.archambault@gmail.com>
  *
@@ -31,8 +31,6 @@ Plugin::setInfos(array(
 	'version'     => '1.2.1',
 	'license'     => 'GPL',
 	'author'      => 'Philippe Archambault',
-	'website'     => 'http://www.wolfcms.org/',
-    'update_url'  => 'http://www.wolfcms.org/plugin-versions.xml',
 	'require_wolf_version' => '0.5.5'
 ));
 

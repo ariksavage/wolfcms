@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2009-2013 Martijn van der Kleijn <martijn.niji@gmail.com>
  *
  * This file is part of Wolf CMS. Wolf CMS is licensed under the GNU GPLv3 license.
@@ -64,7 +64,7 @@ else {
 
     </div>
     <div id="footer">
-        <p>Powered by <a href="http://www.wolfcms.org/">Wolf CMS</a></p>
+        <p>Powered by Wolf CMS</p>
     </div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; inherit &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!',
+
     'A translatable string with a %param% system.' => 'A translatable string with a %param% system.',
     'A translatable string.' => 'A translatable string.',
     'Action disabled!' => 'その行動は無効です。',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'ウェブサイト',
     'What is a Layout?' => 'レイアウトとは何ですか？',
     'What is a Snippet?' => 'スニペットとは何ですか？',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => '有効にすると、誰がされているユーザーだけ管理者がページを編集することができます。',
     'When enabled, users have to login before they can view the page.' => '有効にすると、ユーザーがページを表示する前にログインする必要があります。',
     'Where do the avatars come from?' => 'Where do the avatars come from?',

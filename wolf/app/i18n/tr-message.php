@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; miras al &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Bilgi!</b> Yeni Wolf sürümü mevcut (v. <b>:version</b>)! Sürümünüzü yükseltmek için <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> adresini ziyaret edin!',
+
     'A translatable string with a %param% system.' => '%param% sistemi ile tercüme edilebilir metin.',
     'A translatable string.' => 'Tercüme edilebilir bir metin.',
     'Action disabled!' => 'Eylem devre dışı!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Web Sitesi',
     'What is a Layout?' => 'Yerleşim nedir?',
     'What is a Snippet?' => 'Parça nedir?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Wolf CMS tarafından e-posta gönderildiğinde gönderenin adresi olarak bu adres kullanılacaktır. Varsayılan: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Etkinleştirildiğinde, yalnızca yönetici olan kullanıcılar sayfayı düzenleyebilir.',
     'When enabled, users have to login before they can view the page.' => 'Etkinleştirildiğinde, kullanıcıların sayfayı görebilmeleri için giriş yapmaları gerekir.',
     'Where do the avatars come from?' => 'Avatarlar nereden geliyor?',

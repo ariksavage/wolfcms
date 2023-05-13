@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; iemantot &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informācija!</b> Pieejama jaunā Wolf versija (v. <b>:version</b>)! Apmeklē <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> lai atjauninātu savu versiju!',
+
     'A translatable string with a %param% system.' => 'Tulkojamā lapa ar %param% sistēmu.',
     'A translatable string.' => 'Tulkojamā rinda.',
     'Action disabled!' => 'Rīcība izslēgta!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Mājas lapa',
     'What is a Layout?' => 'Kas ir Izkārtojums?',
     'What is a Snippet?' => 'Kas ir Fragments?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Kad e-pasts tiek sūtīts no Wolf CMS, šī e-pasta adrese tiks izmantota kā sūtītājs. Noklusējuma: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Kad ieslēgts, tikai lietotāji ar administratora tiesībām var rediģēt lapu.',
     'When enabled, users have to login before they can view the page.' => 'Kad ieslēgts, lietotājiem neciešams ierakstīties pirms tie var apskatīt lapu.',
     'Where do the avatars come from?' => 'No kurienes nāk avatāru?',

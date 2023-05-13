@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; inherit &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informasjon!</b> Ny Wolf-versjon tilgjengelig (v. <b>:version</b>)! Gå til <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> for å oppgradere din versjon!',
+
     'A translatable string with a %param% system.' => 'En oversettbar string med et %param%-system.',
     'A translatable string.' => 'En oversettbar string.',
     'Action disabled!' => 'Handling deaktivert!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Webplass',
     'What is a Layout?' => 'Hva er et Oppsett?',
     'What is a Snippet?' => 'Hva er en Snippet?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Når e-poster sendes av Wolf CMS, blir denne e-postadressen brukt som avsender. Standard: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Om dette er valgt kan bare brukere som er administratorer redigere Siden.',
     'When enabled, users have to login before they can view the page.' => 'Om dette er valgt må brukere logge inn før de kan se Siden.',
     'Where do the avatars come from?' => 'Hvor kommer avaterene fra?',

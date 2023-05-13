@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; ärver &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Information!</b> Ny version för Wolf finns tillgänglig (v. <b>:version</b>). Besök <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> för att uppgradera din version!',
+
     'A translatable string with a %param% system.' => 'Ett översättligt uttryck med ett %param% system.',
     'A translatable string.' => 'Ett översättligt uttryck.',
     'Action disabled!' => 'går inte utföra handling!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Hemsida',
     'What is a Layout?' => 'Vad är en uppsättning?',
     'What is a Snippet?' => 'Vad är ett utdrag?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'När e-brev skickas från Wolf CMS, kommer denna e-postadressen att användas som avsändare. Norm: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Om aktiverad, får endast administratörer redigera sidan.',
     'When enabled, users have to login before they can view the page.' => 'Om aktiverad, måste användare logga in innan de får tillgång till sidan.',
     'Where do the avatars come from?' => 'Var kommer alla avatarer ifrån?',

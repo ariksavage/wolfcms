@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; paveldi &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informacija!</b> Nauja Wolf versija jau prieinama (v. <b>:version</b>)! Aplankykite <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> norėdami atnaujinti!',
+
     'A translatable string with a %param% system.' => 'Verčiamas tekstas su %param% parametrų sistema.',
     'A translatable string.' => 'Verčiamas tekstas.',
     'Action disabled!' => 'Veiksmas išjungtas!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Tinklapis',
     'What is a Layout?' => 'Kas yra šablonas?',
     'What is a Snippet?' => 'Kas yra iškarpa?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Kai el. paštas siunčiamas iš Wolf CMS, šis paštas bus nurodytas kaip siuntėjo paštas.',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Kai aktyvuota, tik administratoriai galės redaguoti puslapį.',
     'When enabled, users have to login before they can view the page.' => 'Kai aktyvuota, tik vartotoja kurie prisijungę galės matyti puslapį.',
     'Where do the avatars come from?' => 'Iš kur atvaizduojami avatarai?',

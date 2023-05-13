@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; Auswahl geerbt &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Information!</b> Eine neue Wolf-Version ist verfügbar (Version <b>:version</b>)! Besuchen Sie <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a>, um Ihre Version zu aktualisieren!',
+
     'A translatable string with a %param% system.' => 'Eine übersetzbare Zeichenkette mit eine %param% system.',
     'A translatable string.' => 'Eine übersetzbare Zeichenkette.',
     'Action disabled!' => 'Aktion deaktiviert!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Website',
     'What is a Layout?' => 'Was ist ein Layout?',
     'What is a Snippet?' => 'Was ist ein Inhaltsbaustein?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Wenn E-Mails über das CMS versendet werden, dann wird diese Adresse als Absender verwendet.',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Wenn diese Option aktiviert ist, dann können nur Nutzer mit Administrationsberechtigung diese Seite bearbeiten.',
     'When enabled, users have to login before they can view the page.' => 'Wenn diese Option aktiviert ist, dann müssen Besucher sich zuerst mit ihren Zugangsdaten anmelden, bevor sie diese Seite ansehen können.',
     'Where do the avatars come from?' => 'Woher kommen die Avatar-Grafiken?',

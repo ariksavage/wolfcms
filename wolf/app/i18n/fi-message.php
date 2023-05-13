@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; periytyvä &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Huomioitavaa!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!',
+
     'A translatable string with a %param% system.' => 'K&auml;&auml;nnett&auml;v&auml; merkkijono %param%-systeemill&auml;.',
     'A translatable string.' => 'K&auml;&auml;nnett&auml;viss&auml; oleva merkkijono.',
     'Action disabled!' => 'Toiminto ei ole k&auml;ytett&auml;viss&auml;!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Nettisivu',
     'What is a Layout?' => 'Mik&auml; on ulkoasu?',
     'What is a Snippet?' => 'Mik&auml; on snipetti?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Kun s&auml;hk&ouml;postit l&auml;hett&auml;&auml; Wolf CMS, t&auml;m&auml; s&auml;hk&ouml;postiosoite n&auml;ytet&auml;&auml;n viestin l&auml;hett&auml;j&auml;n&auml;. Oletus: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Kun aktiivinen, vain ne k&auml;ytt&auml;j&auml;t, joilla on yll&auml;pit&auml;j&auml;n oikeudet, voivat muokata sivua.',
     'When enabled, users have to login before they can view the page.' => 'Kun aktiivinen, k&auml;ytt&auml;jien tulee kirjautua ennen sivun tarkastelemista.',
     'Where do the avatars come from?' => 'Mist&auml; haluat avatarien tulevan?',

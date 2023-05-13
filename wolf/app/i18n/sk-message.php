@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; zdedené &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Dôležitá informácia!</b> Je dostupná nová verzia Wolf CMS (v. <b>:version</b>)! Navštívte <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> pre aktualizáciu na najnovšiu verziu!',
+
     'A translatable string with a %param% system.' => 'Preložiteľný reťazec so systémom prememnných %param%.',
     'A translatable string.' => 'Preložiteľný reťazec',
     'Action disabled!' => 'Akcia zakázaná!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Stránka',
     'What is a Layout?' => 'Čo je to šablóna?',
     'What is a Snippet?' => 'Čo sú výstrižky?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Táto adresa sa používa ako adresa odosielateľa, keď redakčný systém odosiela správy. Predvolené: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Ak je zvolená táto možnosť, len používatelia s administrátorskými právami môžu editovať túto stránku.',
     'When enabled, users have to login before they can view the page.' => 'Ak je zvolená táto možnosť, používatelia sa musia pre zobrazenie stránky prihlásiť.',
     'Where do the avatars come from?' => 'Odkiaľ sa načítavajú avatary?',

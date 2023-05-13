@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2009-2011 Martijn van der Kleijn <martijn.niji@gmail.com>
  *
  * This file is part of Wolf CMS. Wolf CMS is licensed under the GNU GPLv3 license.
@@ -38,8 +38,6 @@ Plugin::setInfos(array(
     'version'     => BR_VERSION,
     'license'     => 'GPLv3',
     'author'      => 'Martijn van der Kleijn',
-    'website'     => 'http://www.wolfcms.org/',
-    'update_url'  => 'http://www.wolfcms.org/plugin-versions.xml',
     'require_wolf_version' => '0.6.0',
     'require_php_extensions' => 'dom,SimpleXML'
 ));

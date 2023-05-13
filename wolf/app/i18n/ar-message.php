@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; يرث &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>معلومة!</b> إصدار جديد من Wolf (v. <b>:version</b>)! قم بزيارة <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> لتحديث نسختك!',
+
     'A translatable string with a %param% system.' => 'سلسلة مترجمة مع نظام %param%.',
     'A translatable string.' => 'سلسلة مترجمة.',
     'Action disabled!' => 'النشاط معطل!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'الموقع',
     'What is a Layout?' => 'ما هو التخطيط؟',
     'What is a Snippet?' => 'ماهي القصاصة؟',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'عند إرسال بريد إلكتروني من قبل Wolf CMS، سيستخدم هذا العنوان كمرسل. do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'عند التفعيل، يمكن للمدراء فقط تعديل الصفحة.',
     'When enabled, users have to login before they can view the page.' => 'عند التفعيل، يجب على المستخدمين تسجيل الدخول قبل عرض الصفحة.',
     'Where do the avatars come from?' => 'من أين تأتي الصورة الرمزية؟',

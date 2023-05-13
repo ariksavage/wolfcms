@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; örököl &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Információ!</b> Új WolfCMS verzió jelent meg (<b>:version</b>)! Látogass a <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> oldalra a frissítésért!',
+
     'A translatable string with a %param% system.' => 'Fordítandó szöveg %param% paraméterrel',
     'A translatable string.' => 'Fordítandó szöveg',
     'Action disabled!' => 'Nem engedélyezett művelet!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Honlap',
     'What is a Layout?' => 'Mi az a Sablon?',
     'What is a Snippet?' => 'Mi az a Kódrészlet?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'A WolfCMS ezt az emailcímet fogja használni üzenetek küldésekor.',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Csak rendszergazdák szerkeszthetik az oldalt.',
     'When enabled, users have to login before they can view the page.' => 'A felhasználóknak be kell lépniük az oldal megtekintéséhez.',
     'Where do the avatars come from?' => 'Hogyan lehet avatarom?',

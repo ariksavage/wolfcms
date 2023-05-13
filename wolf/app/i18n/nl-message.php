@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; overerf &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informatie!</b> Nieuwe Wolf versie beschikbaar (v. <b>:version</b>)! Bezoek <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> om uw versie te updaten!',
+
     'A translatable string with a %param% system.' => 'Een vertaalbare regel met een %param% systeem.',
     'A translatable string.' => 'Een vertaalbare regel.',
     'Action disabled!' => 'Actie uitgeschakeld!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Website',
     'What is a Layout?' => 'Wat is een layout?',
     'What is a Snippet?' => 'Wat is een snipper?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Wanneer e-mails door Wolf CMS worden verzonden, dan is dit adres de afzender. Standaard: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Wanneer ingeschakeld kunnen alleen gebruikers met de rol van beheerder deze pagina bewerken.',
     'When enabled, users have to login before they can view the page.' => 'Wanneer ingeschakeld moeten gebruikers eerst inloggen voordat zij de pagina kunnen bekijken.',
     'Where do the avatars come from?' => 'Waar komen de avatars vandaan?',

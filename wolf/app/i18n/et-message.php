@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; pärine &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informatsioon!</b> Uus Wolf versioon on saadaval (v. <b>:version</b>)! Külasta <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> enda versiooni uuendamiseks!',
+
     'A translatable string with a %param% system.' => 'Tõlgitav string %param% süsteemiga.',
     'A translatable string.' => 'Tõlgitav string.',
     'Action disabled!' => 'Toiming keelatud!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Website',
     'What is a Layout?' => 'What is a Layout?',
     'What is a Snippet?' => 'What is a Snippet?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'When enabled, only users who are an administrator can edit the page.',
     'When enabled, users have to login before they can view the page.' => 'When enabled, users have to login before they can view the page.',
     'Where do the avatars come from?' => 'Where do the avatars come from?',

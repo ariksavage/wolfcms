@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2009-2010 Martijn van der Kleijn <martijn.niji@gmail.com>
  * Copyright (C) 2008 Philippe Archambault <philippe.archambault@gmail.com>
  *
@@ -27,8 +27,6 @@ Plugin::setInfos(array(
     'title'       => __('Archive'),
     'description' => __('Provides an Archive pagetype behaving similar to a blog or news archive.'),
     'version'     => '1.1.0',
-    'website'     => 'http://www.wolfcms.org/',
-    'update_url'  => 'http://www.wolfcms.org/plugin-versions.xml'
 ));
 
 // Add the plugin's tab and controller

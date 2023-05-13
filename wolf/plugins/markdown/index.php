@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2009-2010 Martijn van der Kleijn <martijn.niji@gmail.com>
  *
  * This file is part of Wolf CMS. Wolf CMS is licensed under the GNU GPLv3 license.
@@ -28,8 +28,6 @@ Plugin::setInfos(array(
     'title'       => __('Markdown filter'),
     'description' => __('Allows you to use the Markdown text filter (with MarkdownExtra and Smartypants).'),
     'version'     => '2.0.2',
-    'website'     => 'http://www.wolfcms.org/',
-    'update_url'  => 'http://www.wolfcms.org/plugin-versions.xml'
 ));
 
 Filter::add('markdown', 'markdown/filter_markdown.php');

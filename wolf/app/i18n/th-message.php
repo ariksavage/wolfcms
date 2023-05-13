@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; รับช่วง &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>ข่าวสาร!</b> Wolf รุ่นใหม่มาแล้ว (v. <b>:รุ่น</b>)! ไปเยี่ยมชม <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> เพื่ออับเกรดรุ่นของคุณ!',
+
     'A translatable string with a %param% system.' => 'แปลข้อความด้วยระบบ %param%',
     'A translatable string.' => 'แปลข้อความ',
     'Action disabled!' => 'การกระทำถูกระงับ!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'เว็บไซต์',
     'What is a Layout?' => 'รูปแบบคืออะไร?',
     'What is a Snippet?' => 'ข้อความคืออะไร?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'เมื่ออีเมลนี้ถูกส่งออกไปโดย Wolf CMS, เมลนี้จะเป็นผู้ส่ง. ค่าดั้งเดิม: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'เมื่อเปิดการใช้งาน, เฉพาะผู้ใชที่เป็นผู้ดูแลระบบสามารถแก้ไขหน้าเพจ้',
     'When enabled, users have to login before they can view the page.' => 'เมื่อเปิดการใช้งาน, ผู้ใช้จะต้องเข้าสู่ระบบก่อนจึงจะสามารถดูหน้าเพจ',
     'Where do the avatars come from?' => 'รูปอวตารมาจากไหน?',

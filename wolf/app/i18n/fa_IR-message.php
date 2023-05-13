@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; inherit &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!',
+
     'A translatable string with a %param% system.' => 'A translatable string with a %param% system.',
     'A translatable string.' => 'ردیف ترجمه',
     'Action disabled!' => 'این گزینه امکان پذیر نیست!',
@@ -188,8 +188,6 @@ return array(
     'Website' => 'سایت اینترنتی',
     'What is a Layout?' => 'طرح صفحه چیست؟',
     'What is a Snippet?' => 'Snippet چیست؟',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'زمانی که پست الکترونیکی از طرف Wolf CMS فرستاده میشود، از آدرس زیر استفاده خواهد شد:
-do-not-reply@wolfcms.org',
     'When enabled, only users who are an administrator can edit the page.' => 'در هنگام فعال شدن، فقط کاربرانی که administrator هستند میتوانند این صفحه را تعییر دهند.',
     'When enabled, users have to login before they can view the page.' => 'با فعال کردن این قسمت، کاربران برای دیدن صفحه مجبور به وارد شدن به سایت میگردند',
     'Where do the avatars come from?' => 'Where do the avatars come from?',

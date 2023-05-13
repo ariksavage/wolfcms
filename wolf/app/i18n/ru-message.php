@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; наследуется &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Информация!</b> Доступна новая версия WolfCMS (в. <b>:version</b>)! Зайдите на <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> для обновления вашей версии!',
+
     'A translatable string with a %param% system.' => 'Переводимая строка с %param% системой.',
     'A translatable string.' => 'Переводимая строка.',
     'Action disabled!' => 'Действие выключено!',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Сайт',
     'What is a Layout?' => 'Что такое макет?',
     'What is a Snippet?' => 'Что такое фрагмент?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Wolf CMS будет отправлять письма с этого адреса. По-умолчанию: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Изменять страницу смогут только администраторы.',
     'When enabled, users have to login before they can view the page.' => 'Только зарегистрированные пользователи смогут просматривать страницу.',
     'Where do the avatars come from?' => 'Откуда берутся аватары?',

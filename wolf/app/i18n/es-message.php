@@ -8,7 +8,7 @@
 
 return array(
     '&#8212; inherit &#8212;' => '&#8212; heredar &#8212;',
-    '<b>Information!</b> New Wolf version available (v. <b>:version</b>)! Visit <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> to upgrade your version!' => '<b>Informaci&oacute;n!</b> Nueva versi&oacute;n de Wolf disponible (v. <b>:version</b>)! Visita <a href="http://www.wolfcms.org/">http://www.wolfcms.org/</a> para actualizar tu versi&oacute;n!',
+
     'A translatable string with a %param% system.' => 'Una cadena traducible con un sistema de %param%',
     'A translatable string.' => 'Una cadena traducible.',
     'Action disabled!' => 'Acci&oacute;n deshabilitada',
@@ -187,7 +187,7 @@ return array(
     'Website' => 'Sitio',
     'What is a Layout?' => '&iquest;Qu&eacute; es una plantilla?',
     'What is a Snippet?' => '&iquest;Qu&eacute; es un fragmento?',
-    'When emails are sent by Wolf CMS, this email address will be used as the sender. Default: do-not-reply@wolfcms.org' => 'Cuando se env&iacute;en emails desde Wolf CMS, &eacute;sta ser&aacute; la direcci&oacute;n usada como remitente. Por defecto: do-not-reply@wolfcms.org',
+
     'When enabled, only users who are an administrator can edit the page.' => 'Al habilitarlo, solo los usuarios que sean administrador podr&aacute;n editar esta p&aacute;gina.',
     'When enabled, users have to login before they can view the page.' => 'Al habilitarlo, los usuarios deber&aacute;n identificarse antes de poder acceder a esta p&aacute;gina.',
     'Where do the avatars come from?' => '&iquest;De d&oacute;nde provienen los avatares?',

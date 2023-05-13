@@ -1,6 +1,6 @@
 <?php
 /*
- * Wolf CMS - Content Management Simplified. <http://www.wolfcms.org>
+ * Wolf CMS - Content Management Simplified.
  * Copyright (C) 2002, 2003, 2005 Ulf Harnhammar <metaur@users.sourceforge.net>
  *
  * This file is part of Wolf CMS.
