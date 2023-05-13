@@ -11,4 +11,4 @@
 ! .ddev/commands/web
 
 # Wolf
-config.php
+config/

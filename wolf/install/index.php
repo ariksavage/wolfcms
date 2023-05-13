@@ -21,7 +21,8 @@ error_reporting(-1);
 define('INSTALL_SEQUENCE', true);
 
 define('CORE_ROOT', realpath(dirname(__FILE__).'/../../wolf'));
-define('CFG_FILE', realpath('../../config.php'));
+define('CFG_FILE', '../../config.php');
+define('CFG_LOCAL', '../../config/config.php');
 define('PUBLIC_ROOT', realpath('../../public/'));
 define('DEFAULT_ADMIN_USER', 'admin');
 require_once CORE_ROOT.'/Framework.php';
@@ -41,7 +42,7 @@ require_once CORE_ROOT.'/Framework.php';
     <div id="content">
 
 <?php
-if (isset($_POST['install']) && !isset($_POST['commit']) && file_exists(CFG_FILE) && !(filesize(CFG_FILE) > 1)) {
+if (isset($_POST['install']) && !isset($_POST['commit']) && file_exists(CFG_LOCAL) && !(filesize(CFG_LOCAL) > 1)) {
     require_once 'install.php';
 }
 else if (isset($_POST['install']) && isset($_POST['commit']) && isset($_POST['config'])) {
@@ -49,12 +50,12 @@ else if (isset($_POST['install']) && isset($_POST['commit']) && isset($_POST['co
     require_once 'do-install.php';
     require_once 'post-install.php';
 }
-else if (isset($_POST['upgrade']) && isset($_POST['commit']) && file_exists(CFG_FILE) && (filesize(CFG_FILE) > 1)) {
-    require_once CFG_FILE;
-    require_once CORE_ROOT.'/Framework.php';
+else if (isset($_POST['upgrade']) && isset($_POST['commit']) && file_exists(CFG_LOCAL) && (filesize(CFG_LOCAL) > 1)) {
+    // require_once CFG_FILE;
+    // require_once CORE_ROOT.'/Framework.php';
     require_once 'do-upgrade.php';
 }
-else if (!isset($_POST['upgrade']) && !isset($_POST['commit']) && file_exists(CFG_FILE) && (filesize(CFG_FILE) > 1)) {
+else if (!isset($_POST['upgrade']) && !isset($_POST['commit']) && file_exists(CFG_LOCAL) && (filesize(CFG_LOCAL) > 1)) {
     require_once 'upgrade.php';
 }
 else {

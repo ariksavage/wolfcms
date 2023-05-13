@@ -55,7 +55,7 @@ $config_tmpl->assign($config);
 $config_content = $config_tmpl->fetch();
 
 // Write config.php
-if (!file_put_contents(CFG_FILE, $config_content)) {
+if (!file_put_contents(CFG_LOCAL, $config_content)) {
     $error .= "<ul><li><strong>Config file could not be written!</strong></li>\n";
 }
 else {
@@ -64,7 +64,7 @@ else {
 
 if (false === $error) {
     // Include generated config.php
-    require CFG_FILE;
+    require_once(CFG_FILE);
 
     // Generate admin name (defaults to 'admin') and pwd
     if (isset($_POST['config']['admin_username'])) {
@@ -76,7 +76,7 @@ if (false === $error) {
             $admin_passwd = AuthUser::generateHashedPassword($admin_passwd_precrypt,$admin_salt);
         } catch (Exception $e) {
             $error = 'Wolf CMS could not generate a default administration password and has not been installed.<br />The following error has occured: <p><strong>'. $e->getMessage() ."</strong></p>\n";
-            file_put_contents(CFG_FILE, '');
+            file_put_contents(CFG_LOCAL, '');
         }
     }
 
@@ -93,12 +93,12 @@ if (false === $error) {
         
         if (!file_exists($sqlite_db) && !is_writable($sqlite_dir)) {
             $error = 'Wolf CMS could not access the specified SQLite directory in order to create the SQLite DB.';
-            file_put_contents(CFG_FILE, '');
+            file_put_contents(CFG_LOCAL, '');
         }
 
         if (file_exists($sqlite_db) && !is_writable($sqlite_db)) {
             $error = 'Wolf CMS could not access the specified SQLite DB.';
-            file_put_contents(CFG_FILE, '');
+            file_put_contents(CFG_LOCAL, '');
         }
     }
     
@@ -106,21 +106,21 @@ if (false === $error) {
     $db_host = trim($_POST['config']['db_host']);
     if (empty($db_host)) {
         $error = 'Database host is missing.';
-        file_put_contents(CFG_FILE, '');
+        file_put_contents(CFG_LOCAL, '');
     }
 
     // Validate DB user
     $db_user = trim($_POST['config']['db_user']);
     if (empty($db_user)) {
         $error = 'Database user is missing.';
-        file_put_contents(CFG_FILE, '');
+        file_put_contents(CFG_LOCAL, '');
     }
 
     // Validate DB name
     $db_name = trim($_POST['config']['db_name']);
     if (empty($db_name)) {
         $error = 'Database name is missing.';
-        file_put_contents(CFG_FILE, '');
+        file_put_contents(CFG_LOCAL, '');
     }
 
     // Validate DB table prefix
@@ -128,7 +128,7 @@ if (false === $error) {
     if (!empty($table_prefix)) {
         if (!preg_match('/^[a-zA-Z0-9_]+$/', $table_prefix)) {
             $error = 'Database prefix is not valid. Acceptable database prefix characters are: a-z, 0-9 and _.';
-            file_put_contents(CFG_FILE, '');
+            file_put_contents(CFG_LOCAL, '');
         }
     }
 
@@ -138,14 +138,14 @@ if (false === $error) {
             $PDO = new PDO(DB_DSN, DB_USER, DB_PASS);
         } catch (PDOException $e) {
             $error = 'Wolf CMS could not connect to the database and has not been installed.<br />The following error has occured: <p><strong>'. $e->getMessage() ."</strong></p>\n";
-            file_put_contents(CFG_FILE, '');
+            file_put_contents(CFG_LOCAL, '');
         }
     }
 
     // Run the SQL to setup DB contents
     if (false === $error) {
         if ($PDO) {
-            $msg .= '<li>Database connection successfull.</li>';
+            $msg .= '<li>Database connection successful.</li>';
 
             try {
                 require_once 'schema_'.$_POST['config']['db_driver'].'.php';

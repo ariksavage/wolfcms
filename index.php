@@ -25,10 +25,13 @@ define('APP_PATH', CORE_ROOT.DS.'app');
 require_once(CORE_ROOT.DS.'utils.php');
 
 $config_file = CMS_ROOT.DS.'config.php';
-require_once($config_file);
+$config_local = CMS_ROOT.DS.'config/config.php';
+
 
 // if you have installed wolf and see this line, you can comment it or delete it :)
-if ( ! defined('DEBUG')) { header('Location: wolf/install/'); exit(); }
+if ( ! file_exists($config_local)) { header('Location: wolf/install/'); exit(); }
+
+require_once($config_file);
 
 $url = URL_PUBLIC;
 

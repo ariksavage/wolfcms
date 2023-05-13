@@ -93,7 +93,7 @@
             <tr>
               <td class="label"><label for="setting_admin_email"><?php echo __('Site email'); ?></label></td>
               <td class="field"><input class="textbox" id="setting_admin_email" maxlength="255" name="setting[admin_email]" size="255" type="text" value="<?php echo Setting::get('admin_email'); ?>" /></td>
-              <td class="help"><?php echo __('When emails are sent by Wolf CMS, this email address will be used as the sender.'); ?></td>
+              <td class="help"><?php echo 'When emails are sent by Wolf CMS, this email address will be used as the sender.' ?></td>
             </tr>
             <tr>
               <td class="label"><label for="setting_language"><?php echo __('Language'); ?></label></td>

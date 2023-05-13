@@ -60,15 +60,14 @@ else {
     $pgsql = '-- n/a --';
 }
 
-// Check existence of config file
-$check = file_exists(CFG_FILE);
-$cfg_exists = '<span class="'.((true === $check) ? 'check' : 'notcheck').'">'.((true === $check) ? 'true' : 'false').'</span>';
-if (!$check) $errors = true;
-
 // Check config file is writable
-$check = is_writable(CFG_FILE);
+$check = is_writable(dirname(CFG_LOCAL));
 $cfg_writable = '<span class="'.($check ? 'check' : 'notcheck').'">'.($check ? 'true' : 'false').'</span>';
-if (!$check) $errors = true;
+if (!$check) {
+  $errors = true;
+} else {
+  file_put_contents(CFG_LOCAL, '');
+}
 
 // Check public directory is writable
 $check = is_writable(PUBLIC_ROOT);
@@ -125,11 +124,7 @@ $https = '<span class="'.($check ? 'check' : 'notcheck').'">'.($check ? 'true' :
                 <td class="available"><?php echo $pgsql; ?></td>
             </tr>
             <tr>
-                <td>Config file exists <sup>2)</sup></td>
-                <td class="available"><?php echo $cfg_exists; ?></td>
-            </tr>
-            <tr>
-                <td>Config file is writable <sup>2)</sup></td>
+                <td>Config path  is writable <sup>2)</sup></td>
                 <td class="available"><?php echo $cfg_writable; ?></td>
             </tr>
             <tr>
@@ -146,7 +141,7 @@ $https = '<span class="'.($check ? 'check' : 'notcheck').'">'.($check ? 'true' :
         <sup>1)</sup> - Only one database <strong>has</strong> to be supported by PDO.
         If you use MySQL, you don't need a SQLite or PostgreSQL driver and visa versa.<br/>
 
-        <sup>2)</sup> - "config.php" at install root.<br/>
+        <sup>2)</sup> - <?php print  dirname(realpath(dirname(__FILE__) . '/' . CFG_LOCAL)); ?><br/>
         
         <sup>3)</sup> - "public" at install root.<br/>
 
@@ -159,7 +154,7 @@ $https = '<span class="'.($check ? 'check' : 'notcheck').'">'.($check ? 'true' :
         if ($errors) {
             echo 'Please fix these problems and <button type="submit">test again</button>';
         } else {
-            if (file_exists(CFG_FILE) && filesize(CFG_FILE) == 0) {
+            if (file_exists(CFG_LOCAL) && filesize(CFG_LOCAL) == 0) {
                 if ($scheck && !$mcheck && !$pcheck)
                     echo '<input type="hidden" name="dbtype" value="sqlite"/>';
                 else if ($mcheck && !$scheck && !$pcheck)
