@@ -197,16 +197,6 @@ ol, ul {
         $advisories['CONTRIBUTING.md, file present'] = 'The CONTRIBUTING.md is still present. You may want to remove it for added security.';
     }
 
-    // Does the composer.json file exist?
-    if (file_exists(CORE_ROOT.DS.'..'.DS.'composer.json')) {
-        $advisories['composer.json, file present'] = 'The composer.json is still present. This file is only needed for Wolf CMS development. You may want to remove it for added security.';
-    }
-
-    // Does the .travis.yml file exist?
-    if (file_exists(CORE_ROOT.DS.'..'.DS.'.travis.yml')) {
-        $advisories['.travis.yml, file present'] = 'The .travis.yml is still present. This file is only needed for Wolf CMS development. You may want to remove it for added security.';
-    }
-
     // Is the config file writable?
     if (isWritable(CFG_FILE)) {
         $advisories['config file, writable'] = 'The configuration file has been found to be writable. We would advise you to remove all write permissions on config.php on production systems. As long as no FATAL level potential security issues were detected with the config.php file, you will still be able to run Wolf CMS.';
@@ -233,11 +223,6 @@ ol, ul {
     // Is DEBUG turned on?
     if (DEBUG === true) {
         $warnings['debug on'] = 'Due to the type and amount of information an error might give intruders when debug is turned on, we strongly advise setting debug to FALSE in production systems.';
-    }
-
-    // Does the docs directory exist?
-    if (file_exists(CORE_ROOT.DS.'..'.DS.'docs'.DS)) {
-        $warnings['docs, directory present'] = 'The documenation directory ("docs/") is still present. You may want to remove it for added security.';
     }
 
 

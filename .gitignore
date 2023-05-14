@@ -12,3 +12,6 @@
 
 # Wolf
 config/
+public/
+!public/themes/simple/*
+!public/images/favicon.ico

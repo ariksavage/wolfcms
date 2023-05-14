@@ -1,5 +1,16 @@
 # WOLF CMS
 
+## Local development
+- Install Docker / DDEV
+- DDEV start
+
+## Wolf Install
+For a new site, visit the DDEV url to go through Wolf's install process. When prompted for DB credentials, etc, enter those that will be used in production. Local development will ignore these settings.
+
+## Config and local development
+
+To facilitate local development, the default `config.php` file is configured to work with DDEV (see above). Overrides for production environments will be placed in the `config/config.php` file. Running through the normal Wolf install process will create this file.
+
 ## About Wolf CMS
 
 [![Current Version](http://img.shields.io/badge/wolfcms-v0.8.3.1-blue.svg)](http://www.wolfcms.org/download.html)
