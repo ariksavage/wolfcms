@@ -35,14 +35,16 @@ $config = new class {
   public function __construct() {
     // default ddev config
     $this->DB_NAME = 'db';
-    $this->DB_HOST = 'ddev-wolfcms-db';
+    $this->DB_HOST = 'ddev-' . getenv('DDEV_SITENAME') . '-db';
     $this->DB_PORT = '3306';
     $this->DB_USER = 'db';
     $this->DB_PASS = 'db';
+    $this->DB_SOCKET = '';
+    $this->TABLE_PREFIX = '';
     $this->URL_PUBLIC = getenv('DDEV_PRIMARY_URL') . '/';
     $this->USE_HTTPS = true;
     $this->DEBUG = true;
-    $this->TABLE_PREFIX = '';
+    
     $this->CHECK_UPDATES = true;
     $this->CHECK_TIMEOUT = 3;
     $this->COOKIE_HTTP_ONLY = false;
@@ -57,7 +59,7 @@ $config = new class {
     $this->DELAY_ON_INVALID_LOGIN = true;
     $this->DELAY_ONCE_EVERY = 30; // 30 seconds
     $this->DELAY_FIRST_AFTER = 3;
-    $this->SECURE_TOKEN_EXPIRY = 9;
+    $this->SECURE_TOKEN_EXPIRY = 1800;  // 30 minutes
   }
 
   public function DB_DSN() {
