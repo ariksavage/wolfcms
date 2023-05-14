@@ -1,3 +1,11 @@
+#Options +FollowSymlinks
+RewriteEngine on
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,QSA]
+</IfModule>
+
 #
 # Setting Wolf CMS requirements
 #
@@ -6,12 +14,13 @@
 #
 
 #php_flag magic_quotes_gpc off ## Removed in php5.4
-AddDefaultCharset UTF-8
-Options -Indexes +FollowSymLinks
+#AddDefaultCharset UTF-8
+#Options -Indexes +FollowSymLinks
 
 #
 # Setting rewrite rules
 #
+
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -23,10 +32,69 @@ Options -Indexes +FollowSymLinks
   RewriteRule ^wolf/install/index.php$ wolf/install/index.php?rewrite=1 [L,QSA]
   RewriteRule ^wolf/install/$ wolf/install/index.php?rewrite=1 [L,QSA]
   
+  RewriteRule ^app/webroot/(.*)$ wolf/plugins/ssp/director/app/webroot/$1 [R=301,NC,L]
+  RewriteRule ^m/(.*)$ wolf/plugins/ssp/director/m/$1 [R=301,L,QSA]
+  RewriteRule ^p.php$ wolf/plugins/ssp/director/p.php$1 [L,QSA]
+  RewriteRule ^images.php$ wolf/plugins/ssp/director/images.php$1 [L,QSA]
+  RewriteRule ^index.php?/site$ wolf/plugins/ssp/director/index.php?/site$1 [L,QSA]
+
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
+
   # Main URL rewriting.
-  RewriteRule ^(.*)$ /index.php?WOLFPAGE=$1 [L,QSA]
+  RewriteRule ^(.*)$ index.php?WOLFPAGE=$1 [L,QSA]
 
 </IfModule>
+
+
+#Options +FollowSymlinks
+RewriteEngine on
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,QSA]
+</IfModule>
+
+#
+# Setting Wolf CMS requirements
+#
+# On some server configurations you may need to comment out one or more of
+# the three lines below due to server limitations.
+#
+
+#php_flag magic_quotes_gpc off ## Removed in php5.4
+#AddDefaultCharset UTF-8
+#Options -Indexes +FollowSymLinks
+
+#
+# Setting rewrite rules
+#
+
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Set next line to your Wolf CMS root - if not in subdir, then just /
+  RewriteBase /
+
+  # Rules to allow install sequence to test for mod_rewrite support
+  RewriteRule ^wolf/install/index.html$ wolf/install/index.php?rewrite=1 [L,QSA]
+  RewriteRule ^wolf/install/index.php$ wolf/install/index.php?rewrite=1 [L,QSA]
+  RewriteRule ^wolf/install/$ wolf/install/index.php?rewrite=1 [L,QSA]
+  
+  RewriteRule ^app/webroot/(.*)$ wolf/plugins/ssp/director/app/webroot/$1 [R=301,NC,L]
+  RewriteRule ^m/(.*)$ wolf/plugins/ssp/director/m/$1 [R=301,L,QSA]
+  RewriteRule ^p.php$ wolf/plugins/ssp/director/p.php$1 [L,QSA]
+  RewriteRule ^images.php$ wolf/plugins/ssp/director/images.php$1 [L,QSA]
+  RewriteRule ^index.php?/site$ wolf/plugins/ssp/director/index.php?/site$1 [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+
+  # Main URL rewriting.
+  RewriteRule ^(.*)$ index.php?WOLFPAGE=$1 [L,QSA]
+
+</IfModule>
+
+

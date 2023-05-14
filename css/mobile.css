@@ -1,0 +1,43 @@
+html{font-size:100%;}
+body{width:100vw; overflow-x:hidden;}
+#logo{height:auto; width:20vw;}
+#dotscontainer{right: 12vw;}
+#dots{background-size: 0.4vw auto; margin-top: 8.3vh;}
+#header{padding: 0 1.5vw; height: 10vw;}
+nav#main{height:1.7vw;}
+nav#main > ul{width:77vw; margin-top: 1.7vw;}
+nav#main > ul > li > a,
+nav#main ul ul li a{font-size:1.5em;}
+nav#secondary{margin-left: -1.5vw; margin-top: 5.8vw;}
+nav#secondary a {font-size: 2em;}
+h2#tagline{font-size:1.5em; margin-top: 5.8vw;}
+body.home #content{padding: 20px 12.5vw; max-width: 75vw;}
+#container{padding: 20px 0px 140px; max-width: 100vw; width: 100vw;}
+body.sidebar.left #sidebar{padding: 0 1vw; width: 20vw; min-height: 200px; border:none;}
+body.sidebar.left article#main{padding: 0px 1vw; margin: 0px 12vw 0px -3px; max-width: 63vw;}
+body.sidebar.left #socialMedia a{width:4vw; height:4vw; background-size:5vw 5vw;}
+body.sidebar.left article#main div.column {width:100%; max-width: 100%; padding:0; margin:0;}
+footer .inner {padding-right: 13vw; max-width: 87vw; font-size:1em;}
+footer#middle .inner {font-size: 1.5vw;}
+footer#middle:before{display:none;}
+footer#middle{height:75px;}
+footer#upper{bottom:134px;}
+footer#bottom{width:100vw;left:0;}
+footer .inner span{white-space:nowrap;}
+nav#footer ul li {font-size: 1.4vw; display: inline; float: left; width: 14.5vw; min-width: 100px;clear: none}
+article#portfolio{width:100%; max-width:100vw;}
+article#project #info{padding:0 1vw; width:20vw; min-width:0;}
+article#project #slideshow{width:77vw;}
+article#project #portfolio{width:102%; max-width:100vw; min-height:0; margin-bottom: 50px;}
+article#project #mini-left {bottom: 25px; height: 50px; width: 50px; left: 3vw; background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%; color: #FFF; font-size: 2em; box-shadow: 2px 2px 3px rgba(0,0,0,0.9);}
+article#project #mini-left:hover {box-shadow:none;}
+article#project #mini-left:before{content:'<'; color:#fff; font-size:1.2em; position:relative; bottom:3px; right:1px;}
+article#project #mini-right {bottom: 25px; height: 50px; width: 50px; right: 3vw; background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%; color: #FFF; font-size: 2em; box-shadow: 2px 2px 3px rgba(0,0,0,0.9);}
+article#project #mini-right:hover {box-shadow:none;}
+article#project #mini-right:before{content:'>'; color:#fff; font-size:1.2em; position:relative; bottom:3px; left:1px;}
+body.contact article#main {position: relative; min-height:1350px;}
+body.contact article#main >h1{font-size:1.5em;}
+body.contact #main #contactinfo{ width:100%;float: left;}
+body.contact #main #contactform {width: 100%;float:left;}
+body.contact #main #map {width: 100%;float:left;margin-bottom:50px; }
+footer#middle .inner span.copy > br {display: none;}

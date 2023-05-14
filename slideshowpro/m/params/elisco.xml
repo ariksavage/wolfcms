@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+<customParams
+	navButtonStyle = "Default"
+/>
+<nativeParams
+	galleryColumns = "4"
+	albumTitleSize="0"
+	albumDescSize="0"
+	albumBackgroundColor="0xFFFFFF"
+	contentScale="Proportional"
+/>
+</params>

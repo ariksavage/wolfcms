@@ -1,0 +1,2 @@
+#map{height:400px; min-width:400px; background-image:url('/images/elisco-map-fallback.jpg'); background-size:cover;}
+#map #fallback{display:block;float:left;height:100%;width:100%;}
