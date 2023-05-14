@@ -11,13 +11,6 @@
  * @package Installer
  */
 
-// Make sure we hide ugly errrors
-// Report all PHP errors (see changelog)
-error_reporting(E_ALL);
-
-// Report all PHP errors
-error_reporting(-1);
-
 define('INSTALL_SEQUENCE', true);
 
 define('CORE_ROOT', realpath(dirname(__FILE__).'/../../wolf'));

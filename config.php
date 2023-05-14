@@ -42,21 +42,21 @@ $config = new class {
     $this->DB_SOCKET = '';
     $this->TABLE_PREFIX = '';
     $this->URL_PUBLIC = getenv('DDEV_PRIMARY_URL') . '/';
-    $this->USE_HTTPS = true;
-    $this->DEBUG = true;
+    $this->USE_HTTPS = TRUE;
+    $this->DEBUG = FALSE;
     
-    $this->CHECK_UPDATES = true;
+    $this->CHECK_UPDATES = TRUE;
     $this->CHECK_TIMEOUT = 3;
-    $this->COOKIE_HTTP_ONLY = false;
+    $this->COOKIE_HTTP_ONLY = FALSE;
     $this->ADMIN_DIR = 'admin';
-    $this->USE_MOD_REWRITE = true;
+    $this->USE_MOD_REWRITE = TRUE;
     $this->URL_SUFFIX = '';
     $this->DEFAULT_TIMEZONE = date_default_timezone_get();
-    $this->USE_POORMANSCRON = false;
+    $this->USE_POORMANSCRON = FALSE;
     $this->POORMANSCRON_INTERVAL = 3600;
     $this->COOKIE_LIFE = 1800;  // 30 minutes
-    $this->ALLOW_LOGIN_WITH_EMAIL = false;
-    $this->DELAY_ON_INVALID_LOGIN = true;
+    $this->ALLOW_LOGIN_WITH_EMAIL = FALSE;
+    $this->DELAY_ON_INVALID_LOGIN = TRUE;
     $this->DELAY_ONCE_EVERY = 30; // 30 seconds
     $this->DELAY_FIRST_AFTER = 3;
     $this->SECURE_TOKEN_EXPIRY = 1800;  // 30 minutes
@@ -116,7 +116,7 @@ if (!defined('USE_HTTPS')) {
 
 // Use HTTP ONLY setting for the Wolf CMS authentication cookie?
 // This requests browsers to make the cookie only available through HTTP, so not javascript for example.
-// Defaults to false for backwards compatibility.
+// Defaults to FALSE for backwards compatibility.
 if (!defined('COOKIE_HTTP_ONLY')) {
   define('COOKIE_HTTP_ONLY', $config->COOKIE_HTTP_ONLY);
 }
@@ -126,7 +126,7 @@ if (!defined('ADMIN_DIR')) {
   define('ADMIN_DIR', $config->ADMIN_DIR);
 }
 
-// Change this setting to enable mod_rewrite. Set to "true" to remove the "?" in the URL.
+// Change this setting to enable mod_rewrite. Set to "TRUE" to remove the "?" in the URL.
 // To enable mod_rewrite, you must also change the name of "_.htaccess" in your
 // Wolf CMS root directory to ".htaccess"
 if (!defined('USE_MOD_REWRITE')) {

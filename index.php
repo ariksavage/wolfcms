@@ -28,10 +28,19 @@ $config_file = CMS_ROOT.DS.'config.php';
 $config_local = CMS_ROOT.DS.'config/config.php';
 
 
+
 // if you have installed wolf and see this line, you can comment it or delete it :)
 if ( ! file_exists($config_local)) { header('Location: wolf/install/'); exit(); }
 
 require_once($config_file);
+
+if (!defined('DEBUG') || !DEBUG) {
+  // Report all PHP errors (see changelog)
+  error_reporting(E_ALL);
+
+  // Report all PHP errors
+  error_reporting(-1);
+}
 
 $url = URL_PUBLIC;
 
