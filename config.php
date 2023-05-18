@@ -19,9 +19,9 @@ $config = new class {
   public $URL_PUBLIC;
   public $USE_HTTPS;
   public $COOKIE_HTTP_ONLY;
+  public $URL_SUFFIX;
   public $ADMIN_DIR;
   public $USE_MOD_REWRITE;
-  public $URL_SUFFIX;
   public $DEFAULT_TIMEZONE;
   public $USE_POORMANSCRON;
   public $POORMANSCRON_INTERVAL;
@@ -50,7 +50,7 @@ $config = new class {
     $this->COOKIE_HTTP_ONLY = FALSE;
     $this->ADMIN_DIR = 'admin';
     $this->USE_MOD_REWRITE = TRUE;
-    $this->URL_SUFFIX = '';
+    $this->URL_SUFFIX = '.php';
     $this->DEFAULT_TIMEZONE = date_default_timezone_get();
     $this->USE_POORMANSCRON = FALSE;
     $this->POORMANSCRON_INTERVAL = 3600;
