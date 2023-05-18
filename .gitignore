@@ -15,3 +15,7 @@ config/
 public/
 !public/themes/simple/*
 !public/images/favicon.ico
+test.php
+
+# Database dumps
+db
