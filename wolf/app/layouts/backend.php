@@ -188,6 +188,7 @@ if (!isset($title) || trim($title) == '') {
     <div id="footer">
       <p>
       <?php echo __('Thank you for using'); ?> Wolf CMS <?php echo CMS_VERSION; ?>
+      | <a href="/info.php" target="_blank">PHP v<?php echo phpversion();?></a>
       </p>
 <?php if (DEBUG): ?>
         <p class="stats">
