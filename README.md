@@ -1,17 +1,52 @@
+
 # WOLF CMS
 
 ## Local development
-- Install Docker / DDEV
-- DDEV start
+- Install Docker: [documentation](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/)
+- Install DDEV: [documentation](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/)
 
-## Wolf Install
-For a new site, visit the DDEV url to go through Wolf's install process. When prompted for DB credentials, etc, enter those that will be used in production. Local development will ignore these settings.
+- configure the .ddev/config.yml
+  Minimum configuration:
+    - name: <projectname> 
+      Name of the project, automatically provides http://projectname.ddev.site and https://projectname.ddev.site
+
+    - host_db_port: "59002"
+      The host port binding for the ddev-dbserver can be explicitly specified. It is dynamic unless explicitly specified. If you want to be able to connect to the local database from a desktop application (ie Navicat), this port should be specified, and be unique across all local projects.
+
+    - See the config.yaml for descriptions of all other available settings
+- Check out a new branch for the client
+  $ `git checkout -b client-name`
+- DDEV start:
+   $ `ddev start`
+
+## Migrate an existing site:
+  - Launch PHP MyAdmin $`ddev launch -p`
+     - or your mysql software of choice
+       - host: 127.0.0.1:59002 (or the port specified in the .ddev/config.yaml)
+       - db name: 'db'
+       - user: 'db'
+       - password: 'db'
+
+  - Import copy of your site's database into the local *db* database
+    - Copy files from the existing site for these directories:
+    - CSS
+    - JS
+    - Images
+    - public
+
+- Launch the site and begin debugging the database (layouts, snippets).
+
+## Brand new Wolf Install
+For a new site, visit the DDEV url to go through Wolf's install process. When prompted for DB credentials, etc, enter those that will be used in production. Local development will ignore these settings in favor of the default DDEV configuration.
 
 ## Config and local development
 
 To facilitate local development, the default `config.php` file is configured to work with DDEV (see above). Overrides for production environments will be placed in the `config/config.php` file. Running through the normal Wolf install process will create this file.
 
-## About Wolf CMS
+## About Wolf CMS (9.0.0)
+With version 9.0.0, the basic Wolf framework has been updated for compatibility with PHP 8.3 and local development as described above.
+
+## About Wolf CMS (as of 8.3.1)
 
 [![Current Version](http://img.shields.io/badge/wolfcms-v0.8.3.1-blue.svg)](http://www.wolfcms.org/download.html)
 [![Build Status](http://img.shields.io/travis/wolfcms/wolfcms/master.svg)](http://travis-ci.org/wolfcms/wolfcms)
