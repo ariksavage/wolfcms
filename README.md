@@ -1,5 +1,15 @@
 
-# WOLF CMS
+# WOLF CMS 0.9 (PHP 8 fork)
+
+Wolf CMS lost official support, and wolfcms.org went with it. This fork gets Wolf 0.8.3.1 running on PHP 8 and adds a DDEV setup, so old Wolf sites can be rescued and new ones started. Maintained by [Arik Savage](https://ariksavage.com).
+
+## What this fork changes
+
+- **PHP 8 compatibility.** Curly-brace string offsets like `$param{0}`, removed in PHP 8, are now `$param[0]`. Wolf falls back to the server's timezone when the config doesn't set one. Example markup in comments no longer includes closing `?>` tags, which dropped PHP out of PHP mode mid-file.
+- **Installer, login and admin fixes.** The installer, login, settings, user saving and plugin version checks all work on PHP 8. The plugin update check confirms its update file exists before fetching it. The installer writes the new config layout and assumes clean URLs.
+- **One config for local and live.** The core `config.php` defaults to DDEV's database settings, and an untracked `config/config.php` overrides it in production, so no server credentials are committed. A working `.htaccess` ships in the repo.
+- **wolfcms.org removed.** References to the defunct site are gone from footers, help text and the plugin screen, along with build files (`composer.json`, `.travis.yml`) that only applied to the original project.
+- **Version 0.9.0.0**, bumped from 0.8.3.1 to mark the move to PHP 8. Developed and tested on PHP 8.0 under DDEV.
 
 ## Local development
 - Install Docker: [documentation](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/)
@@ -43,10 +53,7 @@ For a new site, visit the DDEV url to go through Wolf's install process. When pr
 
 To facilitate local development, the default `config.php` file is configured to work with DDEV (see above). Overrides for production environments will be placed in the `config/config.php` file. Running through the normal Wolf install process will create this file.
 
-## About Wolf CMS (9.0.0)
-With version 9.0.0, the basic Wolf framework has been updated for compatibility with PHP 8.3 and local development as described above.
-
-## About Wolf CMS (as of 8.3.1)
+## About Wolf CMS (as of 0.8.3.1, the last official release)
 
 [![Current Version](http://img.shields.io/badge/wolfcms-v0.8.3.1-blue.svg)](http://www.wolfcms.org/download.html)
 [![Build Status](http://img.shields.io/travis/wolfcms/wolfcms/master.svg)](http://travis-ci.org/wolfcms/wolfcms)
