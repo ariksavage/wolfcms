@@ -349,7 +349,7 @@ class AuthUser {
      * @return <type>
      */
     static public function generateHashedPassword($password, $salt) {
-        $hashedPassword = hash('sha256', $password.$salt, false);
+        $hashedPassword = hash('sha512', $password.$salt, false);
         return $hashedPassword;
     }
 
