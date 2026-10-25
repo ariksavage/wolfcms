@@ -309,9 +309,7 @@ class AuthUser {
      * @return string           The actual cookie content.
      */
     static private function bakeUserCookie($time, User $user) {
-        $hash = hash('sha256', rand(), false);
-
-        return 'exp='.$time.'&id='.$user->id.'&digest='.bin2hex($user->username.$user->salt);
+        return 'exp='.$time.'&id='.$user->id.'&digest='.hash('sha256', $user->username.$user->salt, false);
     }
 
     /**
@@ -349,7 +347,7 @@ class AuthUser {
      * @return <type>
      */
     static public function generateHashedPassword($password, $salt) {
-        $hashedPassword = hash('sha256', $password.$salt, false);
+        $hashedPassword = hash('sha512', $password.$salt, false);
         return $hashedPassword;
     }
 
